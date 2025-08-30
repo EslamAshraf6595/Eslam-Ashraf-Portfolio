@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eslam Ashraf — Flutter Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/me.jpg" type="image/jpeg">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header reveal">
+    <div class="container header-inner">
+      <a class="brand" href="#home">EA<span>.</span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="navToggle" class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero reveal">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <p class="eyebrow">Mobile App Developer</p>
+        <h1 class="hero-title"><span id="typed"></span><span class="cursor">▍</span></h1>
+        <p class="hero-sub">I design and develop high-performance Flutter apps with clean architecture and beautiful UI/UX.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="assets/Eslam-Ashraf-CV.pdf" class="btn ghost" download>Download CV</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="assets/me.jpg" alt="Eslam Ashraf" class="profile-photo-big float">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+    <div class="container about-grid">
+      <div class="about-image">
+        <img src="assets/me.jpg" alt="Eslam" class="about-photo float">
+      </div>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>Hi, I’m <strong>Eslam Ashraf</strong> — a passionate <em>Flutter Developer</em> from Egypt.  
+        I specialize in crafting mobile-first applications with modern design, scalable architecture, and real-world usability.  
+        My focus is to deliver apps that are not just functional, but delightful to use.</p>
+        <div class="about-stats">
+          <div><strong>2+</strong><span>Internships</span></div>
+          <div><strong>3+</strong><span>Apps Built</span></div>
+          <div><strong>2026</strong><span>Graduation</span></div>
+        </div>
+        <p>I enjoy solving problems, learning new technologies, and contributing to impactful projects. My strengths include:</p>
+        <ul class="bullets">
+          <li>⚙️ Clean architecture & maintainable code</li>
+          <li>📱 Beautiful, responsive UI design</li>
+          <li>☁️ Firebase & API integration</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section reveal">
+    <div class="container">
+      <h2 class="center">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill"><h3>Flutter</h3><div class="bar"><span data-skill="90"></span></div></div>
+        <div class="skill"><h3>Dart</h3><div class="bar"><span data-skill="85"></span></div></div>
+        <div class="skill"><h3>Firebase</h3><div class="bar"><span data-skill="80"></span></div></div>
+        <div class="skill"><h3>BLoC / Cubit</h3><div class="bar"><span data-skill="75"></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section reveal">
+    <div class="container">
+      <h2 class="center">Projects</h2>
+
+      <div class="project-block">
+        <div class="project-image"><img src="assets/movie.png" alt="Movies App"></div>
+        <div class="project-info">
+          <h3>🎬 Movies App</h3>
+          <p>A feature-rich Flutter app with Clean Architecture, authentication, search, and detailed movie info.</p>
+          <a href="https://github.com/KhalidAbdelrazek/Movies_App" target="_blank" class="btn primary">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-block reverse">
+        <div class="project-image"><img src="assets/news.png" alt="News App"></div>
+        <div class="project-info">
+          <h3>📰 News App</h3>
+          <p>A real-time news app with category filters, search, and theme toggle. Built with Flutter and MVVM pattern.</p>
+          <a href="https://github.com/EslamAshraf6595/newsApp" target="_blank" class="btn primary">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-block">
+        <div class="project-image"><img src="assets/islamy.png" alt="Islami App"></div>
+        <div class="project-info">
+          <h3>📿 Islami App</h3>
+          <p>An Islamic app providing prayer times, Quran access, and daily reminders — with a simple and clean UI.</p>
+          <a href="https://github.com/EslamAshraf6595/islamyApp" target="_blank" class="btn primary">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section reveal">
+    <div class="container">
+      <h2 class="center">Experience & Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Flutter Developer Intern — DEPI</h3>
+          <span>Jun 2025 — Present</span>
+          <p>Working on production-ready apps, architecture, and deployment.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Flutter Developer Intern — Route Academy</h3>
+          <span>Jan 2025 — May 2025</span>
+          <p>Built core features and integrated Firebase services.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Nile University — B.Sc. Computer Science</h3>
+          <span>2022 — 2026</span>
+          <p>Expected graduation in 2026 • GPA 3.15</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <h2 class="center">Contact</h2>
+      <div class="contact-grid">
+        <a href="mailto:eslamashraf6102@gmail.com" class="contact-card">✉️ Email: eslamashraf6102@gmail.com</a>
+        <a href="https://linkedin.com/in/eslam-ashraf-a5b510278" class="contact-card" target="_blank">💼 LinkedIn</a>
+        <a href="https://github.com/EslamAshraf6595" class="contact-card" target="_blank">🐙 GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Eslam Ashraf — All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
