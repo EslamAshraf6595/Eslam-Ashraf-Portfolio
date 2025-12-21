@@ -53,14 +53,14 @@
         
         <div class="stats-bar">
           <div class="stats-item"><strong>3+</strong><span>Training Programs</span></div>
-          <div class="stats-item"><strong>3+</strong><span>Apps Built</span></div>
+          <div class="stats-item"><strong>4+</strong><span>Apps Built</span></div>
           <div class="stats-item"><strong>3.17</strong><span>Current GPA</span></div>
         </div>
 
         <p>My core technical strengths include:</p>
         <ul class="bullets">
           <li>⚙️ Clean architecture & maintainable code</li>
-          <li>📱 Responsive UI design & State Management (BLoC/Cubit)</li>
+          <li>📱 Responsive UI design & State Management (BLoC/Cubit/Provider)</li>
           <li>☁️ Firebase & REST API integration</li>
           <li>💻 Dart, C/C++, Python, Java Fundamentals</li>
         </ul>
@@ -78,17 +78,17 @@
         <div class="timeline-item">
           <h3>Flutter Trainee — Information Technology Institute (iti)</h3>
           <span>Aug 2025 — Oct 2025, Online</span>
-          <p>Completed the Mobile Development using Flutter (120 hrs) program, covering end-to-end mobile development, Firebase and REST APIs integration, and advanced state management. Strengthened expertise in Dart, OOP, and real-world problem-solving.</p>
+          <p>Completed the Mobile Development using Flutter (120 hrs) program, covering end-to-end mobile development, Firebase and REST APIs integration, and advanced state management.</p>
         </div>
         <div class="timeline-item">
           <h3>Flutter Trainee — Digital Egypt Pioneers Initiative (DEPI)</h3>
           <span>Jul 2025 — Present, Hybrid</span>
-          <p>Developing the capstone project (Fitness App), applying application security and hardware interaction, and cultivating essential soft skills for project management.</p>
+          <p>Developing a high-performance Fitness Application as a graduation project. Applied Clean Architecture and Hive local storage to manage complex exercise data, workout tracking, and health metrics.</p>
         </div>
         <div class="timeline-item">
           <h3>Flutter Trainee — Route Academy</h3>
           <span>Jun 2024 — May 2025</span>
-          <p>Mastered Dart, OOP, and Flutter. Developed complex apps integrating APIs, Firebase, and implementing Cubit/Provider for state management. Led the Movie App capstone project.</p>
+          <p>Mastered Dart and Flutter. Developed complex apps integrating APIs and Firebase, implementing Cubit/Provider for state management. Led the Movie App capstone project.</p>
         </div>
       </div>
       
@@ -118,7 +118,7 @@
           <div class="bar"><span data-skill="90"></span></div>
         </div>
         <div class="skill-card">
-          <h3>BLoC / Cubit</h3>
+          <h3>BLoC / Cubit / Provider</h3>
           <div class="bar"><span data-skill="85"></span></div>
         </div>
         <div class="skill-card">
@@ -134,24 +134,8 @@
           <div class="bar"><span data-skill="80"></span></div>
         </div>
         <div class="skill-card">
-          <h3>C / C++</h3>
-          <div class="bar"><span data-skill="65"></span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Python</h3>
-          <div class="bar"><span data-skill="60"></span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Machine Learning</h3>
-          <div class="bar"><span data-skill="50"></span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Data Analysis</h3>
-          <div class="bar"><span data-skill="55"></span></div>
-        </div>
-        <div class="skill-card">
-          <h3>MySQL</h3>
-          <div class="bar"><span data-skill="50"></span></div>
+          <h3>Hive (Local DB)</h3>
+          <div class="bar"><span data-skill="85"></span></div>
         </div>
         <div class="skill-card">
           <h3>Git / GitHub</h3>
@@ -190,11 +174,21 @@
       <h2 class="center">Projects</h2>
 
       <div class="project-block">
+        <div class="project-image"><img src="assets/fitness_app.png" alt="Fitness App"></div>
+        <div class="project-info">
+          <h3>🏋️ Fitness App (DEPI Graduation Project)</h3>
+          <p>A comprehensive fitness tracker featuring real-time workout monitoring, dynamic progress bars, and Hive local storage. Includes an integrated audio player for workouts and a metrics screen to track T.U.T (Time Under Tension) and calories burned.</p>
+          <p style="font-size: 0.9rem; color: var(--accent); margin-bottom: 10px;">Collaborated with: <strong>Youssef Yousry</strong>,<strong>  Menna Walid</strong>,<strong> Amr Khalid</strong> , and <strong>Mustafa Osama</strong>.</p>
+          <a href="https://github.com/EslamAshraf6595/Depi_graduation_project" target="_blank" class="btn ghost">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-block">
         <div class="project-image"><img src="assets/movie.png" alt="Movies App"></div>
         <div class="project-info">
           <h3>🎬 Movie App</h3>
-          <p>Developed using Flutter with Clean Architecture, MVVM, and BLoC for scalability. Features include authentication, advanced search, and user profile management, with a responsive UI and localization support. (Route Academy Capstone)</p>
-          <a href="https://github.com/KhalidAbdelrazek/Movies_App" target="_blank" class="btn primary">View on GitHub</a>
+          <p>Developed using Flutter with Clean Architecture, MVVM, and BLoC for scalability. Features include authentication, advanced search, and user profile management, with a responsive UI and localization support.</p>
+          <a href="https://github.com/KhalidAbdelrazek/Movies_App" target="_blank" class="btn ghost">View on GitHub</a>
         </div>
       </div>
 
@@ -203,7 +197,7 @@
         <div class="project-info">
           <h3>📰 News App</h3>
           <p>A real-time news app developed with Flutter, integrating a public News API for dynamic content. Implemented category-based filtering, in-app search, theme toggle, and utilized MVVM architecture.</p>
-          <a href="https://github.com/EslamAshraf6595/newsApp" target="_blank" class="btn primary">View on GitHub</a>
+          <a href="https://github.com/EslamAshraf6595/newsApp" target="_blank" class="btn ghost">View on GitHub</a>
         </div>
       </div>
 
@@ -212,7 +206,7 @@
         <div class="project-info">
           <h3>📿 Islamy App</h3>
           <p>Engineered a cross-platform Islamic application providing six core utilities. Integrated external APIs (for prayer times and audio) and SharedPreferences for local data persistence, implementing Cubit/Provider.</p>
-          <a href="https://github.com/EslamAshraf6595/islamyApp" target="_blank" class="btn primary">View on GitHub</a>
+          <a href="https://github.com/EslamAshraf6595/islamyApp" target="_blank" class="btn ghost">View on GitHub</a>
         </div>
       </div>
     </div>
