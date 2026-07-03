@@ -1,68 +1,95 @@
-// --- ANIMATION: Typed effect (JS logic) ---
-const typedEl = document.querySelector('#typed');
-const phrases = ['I build Flutter apps.', 'Clean Architecture.', 'Beautiful UI/UX.']; 
-let idx = 0, char = 0, forward = true;
-function typeLoop(){
-  const text = phrases[idx];
-  if(forward){
-    char++;
-    typedEl.textContent = text.slice(0,char);
-    if(char === text.length){ forward=false; setTimeout(typeLoop,1000); return; }
-  } else {
-    char--;
-    typedEl.textContent = text.slice(0,char);
-    if(char===0){ forward=true; idx=(idx+1)%phrases.length; }
-  }
-  setTimeout(typeLoop, forward?80:40);
-}
-typeLoop();
-// ------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
 
-// Year in footer
-document.querySelector('#year').textContent = new Date().getFullYear();
+    // 1. Update Footer Year
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 
-// Mobile nav toggle FIX
-const navToggle = document.querySelector('#navToggle');
-if(navToggle){
-  const nav = document.querySelector('.main-nav');
-  navToggle.addEventListener('click', ()=> {
-    nav.classList.toggle('open');
-  });
-  
-  // Close nav when a link is clicked
-  document.querySelectorAll('.main-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (nav.classList.contains('open')) {
-        nav.classList.remove('open');
-      }
+    // 2. Mobile Navigation Toggle
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    const navLinks = mainNav.querySelectorAll('a');
+
+    navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('show');
     });
-  });
-}
 
-// --- ANIMATION: Scroll Reveal (JS logic) ---
-const reveals = document.querySelectorAll('.reveal');
-function revealOnScroll(){
-  for(const el of reveals){
-    const rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 60){
-      el.classList.add('active');
-    }
-  }
-}
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
-// ------------------------------------------
+    // Close mobile menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mainNav.classList.remove('show');
+        });
+    });
 
-// --- ANIMATION: Animate skill bars on scroll (JS logic) ---
-function animateSkills(){
-  document.querySelectorAll('.bar span').forEach(bar=>{
-    // Check if the skill bar is visible
-    if(bar.getBoundingClientRect().top < window.innerHeight - 60){
-      // Set the width based on the data-skill attribute
-      bar.style.width = bar.dataset.skill + "%";
+    // 3. Typing Effect for Hero Section
+    const typedTextSpan = document.getElementById("typed");
+    const textArray = ["Flutter Developer.", "Mobile App Engineer.", "CS Student at NU."];
+    const typingDelay = 100;
+    const erasingDelay = 50;
+    const newTextDelay = 2000;
+    let textArrayIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+        if (charIndex < textArray[textArrayIndex].length) {
+            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+        } else {
+            setTimeout(erase, newTextDelay);
+        }
     }
-  });
-}
-window.addEventListener('scroll', animateSkills);
-animateSkills(); // Run on load to check initial visibility
-// ---------------------------------------------------------
+
+    function erase() {
+        if (charIndex > 0) {
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, erasingDelay);
+        } else {
+            textArrayIndex++;
+            if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+            setTimeout(type, typingDelay + 1100);
+        }
+    }
+
+    if (textArray.length && typedTextSpan) {
+        setTimeout(type, newTextDelay + 250);
+    }
+
+    // 4. Scroll Reveal Animations (Fading sections in)
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        const revealPoint = 100;
+
+        revealElements.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            if (elementTop < windowHeight - revealPoint) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Trigger once on load
+
+    // 5. Animate Skill Bars on Scroll
+    const skillBars = document.querySelectorAll('.bar span');
+    
+    const animateSkills = () => {
+        skillBars.forEach(bar => {
+            const barPosition = bar.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight;
+            
+            if (barPosition < screenPosition) {
+                const targetWidth = bar.getAttribute('data-skill');
+                bar.style.width = targetWidth + '%';
+            }
+        });
+    };
+
+    window.addEventListener('scroll', animateSkills);
+    animateSkills(); // Trigger once on load
+});
